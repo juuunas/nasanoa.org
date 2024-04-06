@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import Release from "../../components/Release.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const albums = await getCollection(
+  "releases",
+  ({ data }) => data.type === "album"
+);
+
+const comps = await getCollection(
+  "releases",
+  ({ data }) => data.type === "compilation"
+);
+
+albums.sort(
+  (a, b) =>
+    Date.parse(b.data.pubDate.toString()) -
+    Date.parse(a.data.pubDate.toString())
+);
+
+comps.sort(
+  (a, b) =>
+    Date.parse(b.data.pubDate.toString()) -
+    Date.parse(a.data.pubDate.toString())
+);
+---
+
+<Layout title="Releases">
+  <h1>Releases</h1>
+  <h2>Albums</h2>
+  <div class="space-y-8 divide-y not-prose">
+    {
+      albums.map((album, index) => (
+        <div class={index !== 0 ? "pt-8" : ""}>
+          <Release release={album} readMore={true} />
+        </div>
+      ))
+    }
+  </div>
+  <h2>Compilations</h2>
+  <div class="flex flex-wrap gap-4 not-prose">
+    {
+      comps.map((comp, index) => (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={comp.data.sources[0].url}
+        >
+          <img
+            loading={index < 4 ? "eager" : null}
+            class="rounded-lg brightness-75 transition hover:brightness-105"
+            src={comp.data.image.url}
+            alt={comp.data.image.alt}
+            title={comp.data.title}
+            width={128}
+            height={128}
+          />
+        </a>
+      ))
+    }
+  </div>
+</Layout>

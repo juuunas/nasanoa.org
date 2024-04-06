@@ -1,51 +1,62 @@
 ---
+import { getCollection } from "astro:content";
+
 interface Props {
-	title: string;
+  title: string;
 }
+
+const pages = await getCollection("pages", (page) => page.slug !== "index");
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>nasanoa - {title}</title>
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      * {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
+  </head>
+  <body class="flex flex-col p-2 mx-auto w-full max-w-screen-md">
+    <header class="flex flex-col items-center py-4">
+      <div>
+        <a href="/"
+          ><h1 class="text-2xl tracking-tighter hover:opacity-75">
+            nasanoa
+          </h1></a
+        >
+      </div>
+      <nav class="flex gap-3">
+        <a class="text-sky-600 hover:text-sky-700" href="/releases">Releases</a>
+        {
+          pages.map((page) => (
+            <a
+              class="text-sky-600 capitalize hover:text-sky-700"
+              href={`/${page.slug}`}
+            >
+              {page.slug}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+    <section class="py-8 prose prose-zinc">
+      <slot />
+    </section>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
