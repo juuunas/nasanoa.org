@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+
+export const POSTS_PER_PAGE = 4;
+let showNextPage = false;
+
+const blogPosts = await getCollection("posts").then((posts) => {
+  if (posts.length > 4) showNextPage = true;
+  return posts.slice(0, POSTS_PER_PAGE);
+});
+---
+
+<Layout title="Blog">
+  <h1>Blog</h1>
+  <div class="flex flex-col gap-4">
+    {
+      blogPosts
+        .sort(
+          (a, b) =>
+            Date.parse(b.data.pubDate.toString()) -
+            Date.parse(a.data.pubDate.toString())
+        )
+        .map((post) => <BlogPost post={post} />)
+    }
+  </div>
+  <br />
+  {showNextPage ? <a href={`/blog/2`}>Next page</a> : ""}
+</Layout>

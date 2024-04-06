@@ -20,6 +20,14 @@ export const collections = {
     }),
   }),
   pages: defineCollection({
+    type: "content",
     schema: z.object({}),
+  }),
+  posts: defineCollection({
+    type: "content",
+    schema: z.object({
+      title: z.string(),
+      pubDate: z.date(),
+    }),
   }),
 };

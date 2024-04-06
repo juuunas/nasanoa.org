@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { POSTS_PER_PAGE } from "./index.astro";
+import type { GetStaticPathsOptions } from "astro";
+import BlogPost from "../../components/BlogPost.astro";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const blogPosts = await getCollection("posts");
+
+  return paginate(blogPosts, { pageSize: POSTS_PER_PAGE });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="Blog">
+  <h1>Blog</h1>
+  <h4>Page {page.currentPage}/{Math.ceil(page.total / POSTS_PER_PAGE)}</h4>
+  <div class="flex flex-col gap-4">
+    {
+      page.data
+        .sort(
+          (a, b) =>
+            Date.parse(b.data.pubDate.toString()) -
+            Date.parse(a.data.pubDate.toString())
+        )
+        .map((post) => <BlogPost post={post} />)
+    }
+  </div>
+  <br />
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
+</Layout>
