@@ -28,7 +28,7 @@ const { release, readMore = false } = Astro.props;
     <div>
       <h1 class="text-3xl font-semibold">{release.data.title}</h1>
     </div>
-    <p>{release.data.pubDate.toISOString().slice(0, 10)}</p>
+    <p class="font-mono">{release.data.pubDate.toISOString().slice(0, 10)}</p>
     <div class="flex items-center">
       {
         release.data.sources.map((source) => (
