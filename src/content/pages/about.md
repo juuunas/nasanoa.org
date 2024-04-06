@@ -24,5 +24,6 @@ You can contact me on wherever you can find me.
 
 ### About this site
 
-It's made with the static site generator `Astro` as an attempt to
-learn how to use it. Also with the help of `Tailwind`.
+It's made with the static site generator `Astro` as an attempt to learn how to use it. Also with the help of `Tailwind`.
+
+The source is available [here](https://github.com/juuunas/nasanoa.org "GitHub") if you are interested.
