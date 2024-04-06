@@ -1,0 +1,31 @@
+---
+interface Props {
+  posts: CollectionEntry<"posts">[];
+}
+
+import type { CollectionEntry } from "astro:content";
+import BlogPost from "./BlogPost.astro";
+
+const { posts } = Astro.props;
+---
+
+<h1>Blog</h1>
+<div class="flex flex-col gap-4">
+  {
+    posts
+      .sort(
+        (a, b) =>
+          Date.parse(b.data.pubDate.toString()) -
+          Date.parse(a.data.pubDate.toString())
+      )
+      .map((post) => (
+        <a
+          class="hover:underline no-underline"
+          href={`/blog/post/${post.slug}`}
+        >
+          <BlogPost post={post} />
+        </a>
+      ))
+  }
+</div>
+<slot />

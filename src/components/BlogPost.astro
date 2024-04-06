@@ -8,11 +8,9 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<a class="hover:underline no-underline" href={`/blog/post/${post.slug}`}>
-  <div>
-    <h2 class="!m-0">{post.data.title}</h2>
-    <span class="font-mono">
-      {post.data.pubDate.toISOString().slice(0, 10)}
-    </span>
-  </div>
-</a>
+<div>
+  <h2 class="!m-0">{post.data.title}</h2>
+  <span class="font-mono">
+    {post.data.pubDate.toISOString().slice(0, 10)}
+  </span>
+</div>
