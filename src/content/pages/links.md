@@ -1,6 +1,3 @@
----
----
-
 # Links
 
 - [SoundCloud](https://soundcloud.com/nasanoa "SoundCloud") for songs.

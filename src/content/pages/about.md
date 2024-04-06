@@ -1,6 +1,3 @@
----
----
-
 # About me
 
 My name is Joonas, 18 years old and from Finland.
