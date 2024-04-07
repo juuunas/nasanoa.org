@@ -1,28 +1,45 @@
 import { useEffect, useState } from "preact/hooks";
 
+interface StateTypes {
+  imageUrl: string;
+  artist: string;
+  song: string;
+  cached: number;
+}
+
 export default function LastfmNowPlaying({ username }: { username: string }) {
-  const [data, setData] = useState<{
-    imageUrl: string;
-    artist: string;
-    song: string;
-  }>({ imageUrl: "", artist: "", song: "" });
+  const [data, setData] = useState<StateTypes>({
+    imageUrl: "",
+    artist: "",
+    song: "",
+    cached: 0,
+  });
 
   useEffect(() => {
-    const fetchLastFm = async () => {
+    const fetchLastFm = () => {
+      const cached: StateTypes = JSON.parse(localStorage.getItem("np") || "{}");
+      if (cached?.artist && new Date().getTime() - cached.cached < 30000) {
+        setData(cached);
+        return;
+      }
+
       fetch(
         `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=404bfb4dc499a18ebb78eea2e62988f1&format=json`
       )
         .then((res) => res.json())
         .then((data) => data.recenttracks.track[0])
-        .then((data) =>
-          data["@attr"].nowplaying
-            ? setData({
-                imageUrl: data.image[3]["#text"],
-                artist: data.artist["#text"],
-                song: data.name,
-              })
-            : false
-        );
+        .then((data) => {
+          let state = {
+            imageUrl: data.image[3]["#text"],
+            artist: data.artist["#text"],
+            song: data.name,
+            cached: new Date().getTime(),
+          };
+          if (data["@attr"]?.nowplaying) {
+            setData(state);
+            localStorage.setItem("np", JSON.stringify(state));
+          }
+        });
     };
     fetchLastFm();
     setInterval(() => fetchLastFm(), 60000);
