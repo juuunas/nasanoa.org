@@ -1,6 +1,7 @@
 ---
 import { getEntryBySlug } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import LastfmNowPlaying from "../components/LastfmNowPlaying";
 
 const index = await getEntryBySlug("pages", "index");
 const { Content } = await index.render();
@@ -8,4 +9,5 @@ const { Content } = await index.render();
 
 <Layout title="Home">
   <Content />
+  <LastfmNowPlaying username="jjthtrthrrge4te" client:load />
 </Layout>
