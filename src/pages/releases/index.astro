@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Release from "../../components/Release.astro";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 const albums = await getCollection(
   "releases",
@@ -47,8 +48,7 @@ comps.sort(
           rel="noopener noreferrer"
           href={comp.data.sources[0].url}
         >
-          <img
-            loading={index < 4 ? "eager" : null}
+          <Image
             class="rounded-lg brightness-75 transition hover:brightness-105"
             src={comp.data.image.url}
             alt={comp.data.image.alt}

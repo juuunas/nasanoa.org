@@ -4,6 +4,7 @@ interface Props {
   readMore?: boolean;
 }
 
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 const icons = {
   soundcloud:
@@ -16,7 +17,7 @@ const { release, readMore = false } = Astro.props;
 ---
 
 <div class="flex gap-8 not-prose">
-  <img
+  <Image
     loading={"eager"}
     class="rounded-lg"
     src={release.data.image.url}
@@ -33,7 +34,7 @@ const { release, readMore = false } = Astro.props;
       {
         release.data.sources.map((source) => (
           <a target="_blank" rel="noopener noreferrer" href={source.url}>
-            <img
+            <Image
               class="rounded"
               loading={"eager"}
               src={icons[source.name as keyof typeof icons]}
