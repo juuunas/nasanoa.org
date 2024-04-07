@@ -20,7 +20,7 @@ const { posts } = Astro.props;
       )
       .map((post) => (
         <a
-          class="hover:underline no-underline"
+          class="no-underline hover:underline"
           href={`/blog/post/${post.slug}`}
         >
           <BlogPost post={post} />
