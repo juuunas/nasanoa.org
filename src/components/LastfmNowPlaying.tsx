@@ -23,7 +23,6 @@ export default function LastfmNowPlaying({ username }: { username: string }) {
               })
             : false
         );
-      console.log("called");
     };
     fetchLastFm();
     setInterval(() => fetchLastFm(), 60000);
