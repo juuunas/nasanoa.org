@@ -9,9 +9,3 @@ sources:
   - name: "bandcamp"
     url: "https://nkmtrecords.bandcamp.com/album/nekomata-compilation-vol-2"
 ---
-
-## My second album
-
-This one also is just stuff from my SoundCloud + a couple of tracks I made specifically for this album.
-
-My favorite from it is the song `attention`.
