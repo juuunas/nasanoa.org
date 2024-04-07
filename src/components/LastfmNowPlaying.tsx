@@ -7,13 +7,15 @@ interface StateTypes {
   cached: number;
 }
 
+const initState: StateTypes = {
+  imageUrl: "",
+  artist: "",
+  song: "",
+  cached: 0,
+};
+
 export default function LastfmNowPlaying({ username }: { username: string }) {
-  const [data, setData] = useState<StateTypes>({
-    imageUrl: "",
-    artist: "",
-    song: "",
-    cached: 0,
-  });
+  const [data, setData] = useState<StateTypes>(initState);
 
   useEffect(() => {
     const fetchLastFm = () => {
@@ -38,6 +40,9 @@ export default function LastfmNowPlaying({ username }: { username: string }) {
           if (data["@attr"]?.nowplaying) {
             setData(state);
             localStorage.setItem("np", JSON.stringify(state));
+          } else {
+            setData(initState);
+            localStorage.removeItem("np");
           }
         });
     };
