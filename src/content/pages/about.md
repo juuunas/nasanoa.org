@@ -14,8 +14,8 @@ My main inspiration is `weyheyhey`, but there are a lot of other smaller inspira
 
 - TechDiff (+ all the peace off ppl)
 - Tusk Mite
-- KenkoTaiji
-- shimaU
+- KenKoTaiji
+- sHimaU
 - I Broke My Robot
 
 ### Contact
