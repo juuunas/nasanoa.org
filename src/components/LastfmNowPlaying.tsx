@@ -7,6 +7,23 @@ interface StateTypes {
   cached: number;
 }
 
+interface LastfmResponse {
+  recenttracks: {
+    track: {
+      artist: {
+        "#text": string;
+      };
+      image: {
+        "#text": string;
+      }[];
+      "@attr": {
+        nowplaying: string;
+      };
+      name: string;
+    }[];
+  };
+}
+
 const initState: StateTypes = {
   imageUrl: "",
   artist: "",
@@ -26,10 +43,10 @@ export default function LastfmNowPlaying({ username }: { username: string }) {
       }
 
       fetch(
-        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=404bfb4dc499a18ebb78eea2e62988f1&format=json`
+        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user=${username}&api_key=404bfb4dc499a18ebb78eea2e62988f1&format=json`
       )
         .then((res) => res.json())
-        .then((data) => data.recenttracks.track[0])
+        .then((data: LastfmResponse) => data.recenttracks.track[0])
         .then((data) => {
           let state = {
             imageUrl: data.image[3]["#text"],
