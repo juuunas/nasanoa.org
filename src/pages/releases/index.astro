@@ -3,6 +3,15 @@ import { getCollection } from "astro:content";
 import Release from "../../components/Release.astro";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+const sortReleaseCollectionByDate = (arr: CollectionEntry<"releases">[]) => {
+  arr.sort(
+    (a, b) =>
+      Date.parse(b.data.pubDate.toString()) -
+      Date.parse(a.data.pubDate.toString())
+  );
+};
 
 const albums = await getCollection(
   "releases",
@@ -14,17 +23,8 @@ const comps = await getCollection(
   ({ data }) => data.type === "compilation"
 );
 
-albums.sort(
-  (a, b) =>
-    Date.parse(b.data.pubDate.toString()) -
-    Date.parse(a.data.pubDate.toString())
-);
-
-comps.sort(
-  (a, b) =>
-    Date.parse(b.data.pubDate.toString()) -
-    Date.parse(a.data.pubDate.toString())
-);
+sortReleaseCollectionByDate(albums);
+sortReleaseCollectionByDate(comps);
 ---
 
 <Layout title="Releases">
@@ -51,8 +51,8 @@ comps.sort(
           <Image
             loading={index < 4 ? "eager" : null}
             class="rounded-lg brightness-75 transition hover:brightness-105"
-            src={comp.data.image.url}
-            alt={comp.data.image.alt}
+            src={comp.data.image}
+            alt={`${comp.data.title} cover image`}
             title={comp.data.title}
             width={128}
             height={128}

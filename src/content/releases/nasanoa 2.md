@@ -1,9 +1,7 @@
 ---
 title: "nasanoa 2"
 pubDate: 2023-10-20
-image:
-  url: "https://f4.bcbits.com/img/a2966825344_16.jpg"
-  alt: "nasanoa 2 cover"
+image: "https://f4.bcbits.com/img/a2966825344_16.jpg"
 sources:
   - name: "bandcamp"
     url: "https://nasanoa.bandcamp.com/album/nasanoa-2"

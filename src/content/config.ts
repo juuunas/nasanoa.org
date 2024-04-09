@@ -7,10 +7,7 @@ export const collections = {
       title: z.string(),
       pubDate: z.date(),
       type: z.enum(["album", "compilation"]).default("album"),
-      image: z.object({
-        url: z.string(),
-        alt: z.string(),
-      }),
+      image: z.string(),
       sources: z.array(
         z.object({
           name: z.string(),
