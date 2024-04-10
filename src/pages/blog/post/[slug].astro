@@ -18,5 +18,9 @@ const { Content } = await post.render();
 <Layout title={post.data.title}>
   <h1>Post</h1>
   <BlogPost post={post} />
-  <Content />
+  <div
+    class="prose-h2:mt-8 prose-img:border prose-img:rounded-lg prose-img:grayscale"
+  >
+    <Content />
+  </div>
 </Layout>
