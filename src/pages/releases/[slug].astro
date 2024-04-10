@@ -4,7 +4,10 @@ import Layout from "../../layouts/Layout.astro";
 import Release from "../../components/Release.astro";
 
 export async function getStaticPaths() {
-  const releases = await getCollection("releases", r => r.data.type === "album");
+  const releases = await getCollection(
+    "releases",
+    (r) => r.data.type === "album"
+  );
   return releases.map((r) => ({
     params: { slug: r.slug },
     props: { r },
@@ -20,4 +23,5 @@ const { Content } = await r.render();
   <Release release={r} />
   <hr />
   <Content />
+  <a href="/releases">Back to releases</a>
 </Layout>
