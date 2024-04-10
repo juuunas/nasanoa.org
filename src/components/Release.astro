@@ -5,15 +5,14 @@ interface Props {
 }
 
 import { Image } from "astro:assets";
+
 import type { CollectionEntry } from "astro:content";
-const icons = {
-  soundcloud:
-    "https://d21buns5ku92am.cloudfront.net/26628/images/419675-sc-logo-cloud-black%20%281%29-853a4f-medium-1645807039.png",
-  bandcamp:
-    "https://s4.bcbits.com/img/buttons/bandcamp-button-square-black-512.png",
-};
 
 const { release, readMore = false } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/icons/{bandcamp,soundcloud}.png"
+);
 ---
 
 <div class="flex gap-8 not-prose">
@@ -37,10 +36,9 @@ const { release, readMore = false } = Astro.props;
             <Image
               class="rounded"
               loading={"eager"}
-              src={icons[source.name as keyof typeof icons]}
+              src={images[`/src/assets/icons/${source.name}.png`]()}
               alt={`${source.name} icon`}
               width={24}
-              height={24}
             />
           </a>
         ))
