@@ -1,0 +1,50 @@
+---
+title: "5 ''underrated'' artists in the scene"
+pubDate: 2024-04-14
+---
+
+## The need to recognize
+
+This post is going to list 5 artists, whose work in my opinion needs more recognition and also what many core-listeners might like.
+
+Keep in my mind this is mostly just music that I very much like and I wish more people would listen to. Not necessarily that the entire world population should be forced to like it.
+
+### Misan7hrope
+
+This artist is genuinely the most underrated I've seen. They make insanely chaotic Breakcore with influence being drawn from many places. It's definitely the most _broken_ Breakcore I have ever listened to, it's so good.
+
+For a recommendation, Listen to their latest album on ENDE records [here](https://enderecords.bandcamp.com/album/ende358-misan7hrope-dadaist-preschool).
+
+### Non Human
+
+`Non Human` is a name I never hear anyone talking about. The artist is probably long gone to new ventures since at least 2013, but it's still some of my favorite Breakcore I've listened to.
+
+They make breaks insanely compressed and noisy, sample some cool 2000's pop music and finish it off with cool rave elements. If you like `Shoebill`'s music, you are going to love it.
+
+Their best work is the 2009 EP **War Nah Done**, I would put a download but all the download links are dead so you need to pirate it somewhere (Soulseek).
+
+### Sven Noon
+
+This artist makes really well produced Breakcore with pretty odd time signatures, it's pretty unique, for what it tries to be. It's a joy to listen to every time. Very nice person too.
+
+Checkout their latest release [here](https://sven-noon.bandcamp.com/album/veki-o-aliflanke-2).
+
+### Lneheb
+
+I think they were my first ever follower on SoundCloud, if I recall correctly. Their sound is pretty aggressive with an emotional touch, it's honestly just crazy and very well produced, I like it a lot.
+
+If you are a _Renoise_ producer, they have some videos on YouTube, where they show their break chopping techniques along other things, if you are interested.
+
+My personal favorite release of theirs is [this EP](https://lneheb.bandcamp.com/album/the-face-of-depression).
+
+### the gay hero of appletown
+
+I first heard this artist in the **COREPULSIVE** compilation and I was impressed of the production and the crazy breaks. Their sound is just very solid and I like it a whole lot.
+
+Checkout their [SoundCloud](https://soundcloud.com/svorke) and also their latest release [here](https://thegayheroofappletown.bandcamp.com/album/un).
+
+## Closing words
+
+These were artists I have been enjoying a lot and some happen to be a lot smaller than I am. Hope you check them out.
+
+2 posts in a weeks time, I'm having fun with this. Not sure how long it will last.
