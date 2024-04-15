@@ -27,6 +27,8 @@ Their best work is the 2009 EP **War Nah Done**, I would put a download but all 
 
 This artist makes really well produced Breakcore with pretty odd time signatures, it's pretty unique, for what it tries to be. It's a joy to listen to every time. Very nice person too.
 
+Their song _eternal 11_ was probably my most favorite song of last year, so much so I made my own spin-off of the provided stems for the track too. Lol.
+
 Checkout their latest release [here](https://sven-noon.bandcamp.com/album/veki-o-aliflanke-2).
 
 ### Lneheb
@@ -39,7 +41,7 @@ My personal favorite release of theirs is [this EP](https://lneheb.bandcamp.com/
 
 ### the gay hero of appletown
 
-I first heard this artist in the **COREPULSIVE** compilation and I was impressed of the production and the crazy breaks. Their sound is just very solid and I like it a whole lot.
+I first heard this artist in the **COREPULSIVE** compilation and I was impressed of the production and the crazy breaks. I really want to hear more stuff from them, it's really good.
 
 Checkout their [SoundCloud](https://soundcloud.com/svorke) and also their latest release [here](https://thegayheroofappletown.bandcamp.com/album/un).
 
