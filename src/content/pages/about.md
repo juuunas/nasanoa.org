@@ -8,6 +8,8 @@ My interests are making music, listening to music, DJ, Linux and ummm drinking b
 
 I really got into music after discovering `goreshit` from OSU. After listening to their whole discography on repeat for a year straight, I found `axtrmnt` from a discord server I was in and from there I found `Waqs` and other cool people.
 
+I like _Breakcore_ a lot, but I also like _Glitch_, _Trashwave_, _Hi-Tech_, some _finnish rap_ and also a lot of the other _Hardcore_ subgenres, like _Hardtek_.
+
 My main inspiration is `weyheyhey`, but there are a lot of other smaller inspirations.
 
 #### My favorite artists (kind of in order)

@@ -11,7 +11,7 @@ So you found this new genre/artist, it's pretty obscure, nothing really mainstre
 
 ### Last.fm
 
-Last.fm has in my experience been excellent in finding new artists in the genres I like, be it `Breakcore`, `Hi-Tech` or `Trashwave`, my favorite artists of these genres have mostly been findings from Last.fm's `Similar to` tab in an artist page.
+Last.fm has in my experience been excellent in finding new artists in the genres I like, my favorite artists have mostly been findings from Last.fm's `Similar to` tab in an artist page.
 
 ![Similar to](../../assets/blog/lastfm-similar-to.png "The similar to tab on my artist profile on Last.fm")
 
