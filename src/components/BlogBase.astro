@@ -5,6 +5,8 @@ interface Props {
 
 import type { CollectionEntry } from "astro:content";
 import BlogPost from "./BlogPost.astro";
+import Image from "astro/components/Image.astro";
+import rss from "../assets/icons/rss.png";
 
 const { posts } = Astro.props;
 ---
@@ -29,3 +31,6 @@ const { posts } = Astro.props;
   }
 </div>
 <slot />
+<a class="block w-fit" target="_blank" href="/blog/rss.xml"
+  ><Image src={rss} alt="RSS" width={32} height={32} /></a
+>
