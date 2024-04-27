@@ -11,13 +11,13 @@ Keep in my mind this is mostly just music that I very much like and I wish more 
 
 ### Misan7hrope
 
-This artist is genuinely the most underrated I've seen. They make insanely chaotic Breakcore with influence being drawn from many places. It's definitely the most _broken_ Breakcore I have ever listened to, it's so good.
+This artist is genuinely the most underrated I've seen. They make insanely chaotic _Breakcore_ with influence being drawn from many places. It's definitely the most _broken_ _Breakcore_ I have ever listened to, it's so good.
 
 For a recommendation, Listen to their latest album on ENDE records [here](https://enderecords.bandcamp.com/album/ende358-misan7hrope-dadaist-preschool).
 
 ### Non Human
 
-`Non Human` is a name I never hear anyone talking about. The artist is probably long gone to new ventures since at least 2013, but it's still some of my favorite Breakcore I've listened to.
+`Non Human` is a name I never hear anyone talking about. The artist is probably long gone to new ventures since at least 2013, but it's still some of my favorite _Breakcore_ I've listened to.
 
 They make breaks insanely compressed and noisy, sample some cool 2000's pop music and finish it off with cool rave elements. If you like `Shoebill`'s music, you are going to love it.
 
@@ -25,7 +25,7 @@ Their best work is the 2009 EP **War Nah Done**, I would put a download but all 
 
 ### Sven Noon
 
-This artist makes really well produced Breakcore with pretty odd time signatures, it's pretty unique, for what it tries to be. It's a joy to listen to every time. Very nice person too.
+This artist makes really well produced _Breakcore_ with pretty odd time signatures, it's pretty unique, for what it tries to be. It's a joy to listen to every time. Very nice person too.
 
 Their song _eternal 11_ was probably my most favorite song of last year, so much so I made my own spin-off of the provided stems for the track too. Lol.
 
