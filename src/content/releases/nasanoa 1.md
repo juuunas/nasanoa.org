@@ -9,6 +9,6 @@ sources:
 
 ## My first album
 
-This is my first release. It is basically just a compilation of stuff I uploaded to SoundCloud of the past year.
+This is my first release. It is basically just a compilation of stuff I uploaded to SoundCloud of the past year. It was released on `travongle`'s label.
 
 It also has the song `innocent`, which is still one of my favorite songs I've ever made.
