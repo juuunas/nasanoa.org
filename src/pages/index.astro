@@ -9,5 +9,14 @@ const { Content } = await index.render();
 
 <Layout title="Home">
   <Content />
-  <LastfmNowPlaying username="jjthtrthrrge4te" client:load />
+  <div class="flex flex-wrap gap-6">
+    <LastfmNowPlaying username="jjthtrthrrge4te" client:load />
+    <iframe
+      title="My time right now"
+      src="https://free.timeanddate.com/clock/i9ckyrwj/n296/szw110/szh110/cf100/hnce1ead6"
+      width="110"
+      height="110"
+    >
+    </iframe>
+  </div>
 </Layout>

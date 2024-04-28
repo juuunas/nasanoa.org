@@ -69,7 +69,7 @@ export default function LastfmNowPlaying({ username }: { username: string }) {
 
   return data.song ? (
     <a
-      class="not-prose"
+      class="not-prose w-full"
       href="https://www.last.fm/user/jjthtrthrrge4te"
       target="_blank"
       rel="noopener noreferrer"
