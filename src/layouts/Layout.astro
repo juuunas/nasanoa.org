@@ -25,7 +25,7 @@ const { title } = Astro.props;
       title="nasanoa's blog"
       href={`${Astro.site}blog/rss.xml`}
     />
-    <title>nasanoa - {title.charAt(0).toUpperCase() + title.slice(1)}</title>
+    <title>{title.charAt(0).toUpperCase() + title.slice(1)}</title>
     <style>
       /* Hide scrollbar for Chrome, Safari and Opera */
       *::-webkit-scrollbar {
