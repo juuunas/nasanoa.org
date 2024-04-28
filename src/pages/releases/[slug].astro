@@ -18,7 +18,7 @@ const { r } = Astro.props;
 const { Content } = await r.render();
 ---
 
-<Layout title={r.data.title}>
+<Layout title={`Release (${r.data.title})`}>
   <h1>Release</h1>
   <Release release={r} />
   <hr />
