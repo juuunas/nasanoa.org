@@ -4,6 +4,7 @@ import Release from "../../components/Release.astro";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import OutboundLink from "../../components/OutboundLink.astro";
 
 const sortReleaseCollectionByDate = (arr: CollectionEntry<"releases">[]) => {
   arr.sort(
@@ -43,11 +44,7 @@ sortReleaseCollectionByDate(comps);
   <div class="flex flex-wrap gap-4 justify-center md:justify-normal not-prose">
     {
       comps.map((comp, index) => (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={comp.data.sources[0].url}
-        >
+        <OutboundLink href={comp.data.sources[0].url}>
           <Image
             loading={index < 4 ? "eager" : null}
             class="rounded-lg brightness-75 transition hover:brightness-105"
@@ -57,7 +54,7 @@ sortReleaseCollectionByDate(comps);
             width={128}
             height={128}
           />
-        </a>
+        </OutboundLink>
       ))
     }
   </div>

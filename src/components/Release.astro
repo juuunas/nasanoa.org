@@ -7,6 +7,7 @@ interface Props {
 import { Image } from "astro:assets";
 
 import type { CollectionEntry } from "astro:content";
+import OutboundLink from "./OutboundLink.astro";
 
 const { release, readMore = false } = Astro.props;
 
@@ -32,7 +33,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     <div class="flex items-center">
       {
         release.data.sources.map((source) => (
-          <a target="_blank" rel="noopener noreferrer" href={source.url}>
+          <OutboundLink href={source.url}>
             <Image
               class="rounded"
               loading={"eager"}
@@ -40,7 +41,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               alt={`${source.name} icon`}
               width={24}
             />
-          </a>
+          </OutboundLink>
         ))
       }
     </div>
