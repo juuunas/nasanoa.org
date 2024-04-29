@@ -2,6 +2,7 @@
 import { getEntryBySlug } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import LastfmNowPlaying from "../components/LastfmNowPlaying";
+import { Image } from "astro:assets";
 
 const index = await getEntryBySlug("pages", "index");
 const { Content } = await index.render();
@@ -9,7 +10,7 @@ const { Content } = await index.render();
 
 <Layout title="Home">
   <Content />
-  <div class="flex flex-wrap gap-6">
+  <div class="not-prose flex flex-wrap gap-10">
     <LastfmNowPlaying username="jjthtrthrrge4te" client:load />
     <iframe
       title="My time right now"
@@ -18,5 +19,11 @@ const { Content } = await index.render();
       height="110"
     >
     </iframe>
+    <Image
+      src={`https://raw.githubusercontent.com/IseeJ/CosmosPersona/main/images/3UFO.png`}
+      alt="Cosmo persona"
+      width={300}
+      height={300}
+    />
   </div>
 </Layout>
