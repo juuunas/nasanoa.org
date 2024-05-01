@@ -21,7 +21,7 @@ const { Content, headings } = await post.render();
   <BlogPost post={post} />
   {headings.length ? <TableOfContents headings={headings} /> : ""}
   <div
-    class="prose-h2:mt-8 prose-img:border prose-img:rounded-lg prose-img:grayscale"
+    class="first:prose-h2:mt-8 prose-img:border prose-img:rounded-lg prose-img:grayscale"
   >
     <Content />
   </div>
