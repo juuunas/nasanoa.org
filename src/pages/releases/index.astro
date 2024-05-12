@@ -46,7 +46,6 @@ sortReleaseCollectionByDate(comps);
       comps.map((comp, index) => (
         <OutboundLink href={comp.data.sources[0].url}>
           <Image
-            loading={index < 4 ? "eager" : null}
             class="rounded-lg brightness-75 transition hover:brightness-105"
             src={comp.data.image}
             alt={`${comp.data.title} cover art`}
