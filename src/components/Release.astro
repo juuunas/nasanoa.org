@@ -31,6 +31,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     </div>
     <p class="font-mono">{release.data.pubDate.toISOString().slice(0, 10)}</p>
     <div class="flex items-center">
+    <div class="flex items-center gap-2">
       {
         release.data.sources.map((source) => (
           <OutboundLink href={source.url}>
