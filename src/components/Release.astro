@@ -12,7 +12,7 @@ import OutboundLink from "./OutboundLink.astro";
 const { release, readMore = false } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/icons/{bandcamp,soundcloud}.png"
+  "/src/assets/icons/*.png"
 );
 ---
 
@@ -30,7 +30,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <h1 class="text-3xl font-semibold">{release.data.title}</h1>
     </div>
     <p class="font-mono">{release.data.pubDate.toISOString().slice(0, 10)}</p>
-    <div class="flex items-center">
     <div class="flex items-center gap-2">
       {
         release.data.sources.map((source) => (
