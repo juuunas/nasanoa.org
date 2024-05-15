@@ -21,7 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     loading={"eager"}
     class="rounded-lg"
     src={release.data.image}
-    alt={`${release.data.image} cover art`}
+    alt={`${release.data.title} cover art`}
     width={192}
     height={192}
   />
@@ -35,8 +35,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         release.data.sources.map((source) => (
           <OutboundLink href={source.url}>
             <Image
-              class="rounded"
               loading={"eager"}
+              class="rounded"
               src={images[`/src/assets/icons/${source.name}.png`]()}
               alt={`${source.name} icon`}
               width={24}
