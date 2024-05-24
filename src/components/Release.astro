@@ -16,7 +16,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<div class="flex gap-8 not-prose">
+<div
+  class="flex gap-8 sm:flex-row flex-col justify-center items-center sm:justify-start text-center sm:text-left not-prose"
+>
   <Image
     loading={"eager"}
     class="rounded-lg"
@@ -30,7 +32,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <h1 class="text-3xl font-semibold">{release.data.title}</h1>
     </div>
     <p class="font-mono">{release.data.pubDate.toISOString().slice(0, 10)}</p>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center justify-center sm:justify-start gap-2">
       {
         release.data.sources.map((source) => (
           <OutboundLink href={source.url}>
