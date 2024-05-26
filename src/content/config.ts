@@ -6,7 +6,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       pubDate: z.date(),
-      type: z.enum(["album", "compilation"]).default("album"),
+      type: z.enum(["album", "compilation", "misc"]).default("album"),
       image: z.string(),
       sources: z.array(
         z.object({

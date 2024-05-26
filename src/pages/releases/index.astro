@@ -24,6 +24,11 @@ const comps = await getCollection(
   ({ data }) => data.type === "compilation"
 );
 
+const misc = await getCollection(
+  "releases",
+  ({ data }) => data.type === "misc"
+);
+
 sortReleaseCollectionByDate(albums);
 sortReleaseCollectionByDate(comps);
 ---
@@ -40,10 +45,16 @@ sortReleaseCollectionByDate(comps);
       ))
     }
   </div>
+  <h2>Miscellaneous</h2>
+  {
+    misc.map((misc) => (
+      <Release release={misc} readMore={false} smaller={true} />
+    ))
+  }
   <h2>Compilations</h2>
   <div class="flex flex-wrap gap-4 justify-center md:justify-normal not-prose">
     {
-      comps.map((comp, index) => (
+      comps.map((comp) => (
         <OutboundLink href={comp.data.sources[0].url}>
           <Image
             class="rounded-lg brightness-75 transition hover:brightness-105"
