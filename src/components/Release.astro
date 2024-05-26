@@ -2,6 +2,7 @@
 interface Props {
   release: CollectionEntry<"releases">;
   readMore?: boolean;
+  smaller?: boolean;
 }
 
 import { Image } from "astro:assets";
@@ -9,7 +10,7 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import OutboundLink from "./OutboundLink.astro";
 
-const { release, readMore = false } = Astro.props;
+const { release, readMore = false, smaller = false } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/icons/*.png"
@@ -24,14 +25,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     class="rounded-lg"
     src={release.data.image}
     alt={`${release.data.title} cover art`}
-    width={192}
-    height={192}
+    width={smaller ? 128 : 192}
+    height={smaller ? 128 : 192}
   />
   <div class="flex flex-col gap-2 justify-center">
     <div>
-      <h1 class="text-3xl font-semibold">{release.data.title}</h1>
+      <h1 class=`${smaller ? "text-xl" : "text-3xl"} font-semibold`>
+        {release.data.title}
+      </h1>
     </div>
-    <p class="font-mono">{release.data.pubDate.toISOString().slice(0, 10)}</p>
+    <p class=`font-mono ${smaller ? "text-sm" : ""}`>
+      {release.data.pubDate.toISOString().slice(0, 10)}
+    </p>
     <div class="flex items-center justify-center sm:justify-start gap-2">
       {
         release.data.sources.map((source) => (
@@ -41,7 +46,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               class="rounded"
               src={images[`/src/assets/icons/${source.name}.png`]()}
               alt={`${source.name} icon`}
-              width={24}
+              width={smaller ? 20 : 24}
             />
           </OutboundLink>
         ))
