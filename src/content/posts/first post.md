@@ -1,5 +1,6 @@
 ---
 title: "My first post"
+description: "It's working"
 pubDate: 2024-04-06
 ---
 

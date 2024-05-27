@@ -26,6 +26,9 @@ importers:
       astro:
         specifier: ^4.5.16
         version: 4.5.16(typescript@5.4.4)
+      astro-seo:
+        specifier: ^0.8.3
+        version: 0.8.3(typescript@5.4.4)
       preact:
         specifier: ^10.20.1
         version: 10.20.1
@@ -927,6 +930,9 @@ packages:
   astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
+
+  astro-seo@0.8.3:
+    resolution: {integrity: sha512-gQeEh0U2yyVM0iyU8DTORK6hXMy5WH2wufrkUuNOKjI3LnYLniqgDxm1LZPQDuD6b4OHabVOi/5L88A9POCcCQ==}
 
   astro@4.5.16:
     resolution: {integrity: sha512-1nOVsMq2OJiXnG6gO0Y77vTAboGN9nLQSy/8SGazq4h6x+alzbsMbQbArBgvaLzOSUXD0m91XLs3D8bOSuavrQ==}
@@ -3572,6 +3578,14 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.8.6: {}
+
+  astro-seo@0.8.3(typescript@5.4.4):
+    dependencies:
+      '@astrojs/check': 0.5.10(typescript@5.4.4)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
 
   astro@4.5.16(typescript@5.4.4):
     dependencies:

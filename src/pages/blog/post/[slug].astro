@@ -16,7 +16,11 @@ const { post } = Astro.props;
 const { Content, headings } = await post.render();
 ---
 
-<Layout title={`Post (${post.data.title})`}>
+<Layout
+  title={`Post (${post.data.title})`}
+  desc={post.data.description}
+  postMeta={post.data}
+>
   <h1>Post</h1>
   <BlogPost post={post} />
   {headings.length ? <TableOfContents headings={headings} /> : ""}

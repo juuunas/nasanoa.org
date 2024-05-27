@@ -1,13 +1,18 @@
 ---
 import { getCollection } from "astro:content";
+import { SEO } from "astro-seo";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
   title: string;
+  desc?: string;
+  postMeta?: CollectionEntry<"posts">["data"];
 }
 
 const pages = await getCollection("pages", (page) => page.slug !== "index");
 
-const { title } = Astro.props;
+let { title, desc = "nasanoa's website.", postMeta } = Astro.props;
+title = title.charAt(0).toUpperCase() + title.slice(1);
 ---
 
 <!doctype html>
@@ -25,7 +30,25 @@ const { title } = Astro.props;
       title="nasanoa's blog"
       href={`${Astro.site}blog/rss.xml`}
     />
-    <title>{title.charAt(0).toUpperCase() + title.slice(1)}</title>
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title={title}
+      description={desc}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: `${Astro.site}/android-chrome-192x192.png`,
+        },
+        optional: {
+          description: desc,
+        },
+        article: {
+          authors: postMeta?.description ? ["nasanoa"] : undefined,
+          publishedTime: postMeta?.pubDate.toISOString(),
+        },
+      }}
+    />
     <style>
       /* Hide scrollbar for Chrome, Safari and Opera */
       *::-webkit-scrollbar {

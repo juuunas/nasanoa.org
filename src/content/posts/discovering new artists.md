@@ -1,5 +1,6 @@
 ---
 title: "Discovering new artists"
+description: "Post about discovering new artists in obscure genres."
 pubDate: 2024-04-10
 ---
 
