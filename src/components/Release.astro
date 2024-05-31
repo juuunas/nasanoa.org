@@ -18,7 +18,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <div
-  class="flex gap-8 sm:flex-row flex-col justify-center items-center sm:justify-start text-center sm:text-left not-prose"
+  class=`flex ${smaller ? "gap-6" : "gap-8"} sm:flex-row flex-col justify-center items-center sm:justify-start text-center sm:text-left not-prose`
 >
   <Image
     loading={"eager"}
