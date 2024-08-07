@@ -1,6 +1,6 @@
 ---
 title: "South England Hate Club: Sampler 2"
-pubDate: 2023-04-06
+pubDate: 2024-08-07
 type: "compilation"
 image: "https://f4.bcbits.com/img/a3329979319_10.jpg"
 sources:
