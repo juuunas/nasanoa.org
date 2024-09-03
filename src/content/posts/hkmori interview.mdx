@@ -4,20 +4,30 @@ description: "An interview with hkmori."
 pubDate: 2024-05-27
 ---
 
-import OutboundLink from '../../components/OutboundLink.astro';
-import { Image } from 'astro:assets';
-import hkmoriPfp from '../../assets/blog/hkmori-pfp.jpg'
+import OutboundLink from "../../components/OutboundLink.astro";
+import { Image } from "astro:assets";
+import hkmoriPfp from "../../assets/blog/hkmori-pfp.jpg";
 
 ---
 
-<div class="*:transition-all *:duration-500 flex gap-16 flex-col items-center justify-center min-h-screen"><Image class="peer invert hover:invert-0 -rotate-6 scale-90 hover:rotate-1 hover:scale-100" src={hkmoriPfp} alt="hkmori's SoundCloud pfp" /><h1 class="peer-hover:invert rounded-lg bg-black text-white tracking-tighter peer-hover:tracking-widest w-full text-center p-1">hkmori</h1></div>
+<div class="*:transition-all *:duration-500 flex gap-16 flex-col items-center justify-center min-h-screen">
+  <Image
+    class="peer invert hover:invert-0 -rotate-6 scale-90 hover:rotate-1 hover:scale-100"
+    src={hkmoriPfp}
+    alt="hkmori's SoundCloud pfp"
+  />
+  <h1 class="peer-hover:invert rounded-lg bg-black text-white tracking-tighter peer-hover:tracking-widest w-full text-center p-1">
+    hkmori
+  </h1>
+</div>
 
 ---
+
 ## An interview
 
 Hello again. Back at it after many rough work weeks.
 
-I've been at a loss of content to do in this blog ever since I made it, but I remembered that `gut spiller` did interviews for a short time over at their blog, so I got inspired. Check them out over at _Medium_ <OutboundLink href='https://medium.com/@tiredeyeangel' display='here!' /> 
+I've been at a loss of content to do in this blog ever since I made it, but I remembered that `gut spiller` did interviews for a short time over at their blog, so I got inspired. Check them out over at _Medium_ <OutboundLink href='https://medium.com/@tiredeyeangel' display='here!' />
 
 So today's interview is with `hkmori`, a name you might recognize, or a random person on the street would also recognize. They got insanely popular even after being very popular in our little scene, because of a silly TikTok le maymay.
 
@@ -43,7 +53,7 @@ We are on the internet after all.
 
 ### When did you start making music and why? What is the origin of your artist name?
 
-> I started making music on 21 July, 2022. a friend of mine had finally convinced me to start putting my feelings into sound, and another friend of mine had given me their personal drums folder, so, from that day, I started to try my hand at producing the genre that I most listened to at the time - depressive breakcore!
+> I started making music on 21 April, 2022. a friend of mine had finally convinced me to start putting my feelings into sound, and another friend of mine had given me their personal drums folder, so, from that day, I started to try my hand at producing the genre that I most listened to at the time - depressive breakcore!
 > my artist name is derived from the term "hikikomori", which describes a person that is extremely withdrawn from society - a situation that I have struggled with for nearly all of my recent life.
 
 ### Do you think your music falls under the _Depressive Breakcore_ subgenre? What do you think of the so-called subgenre?
@@ -75,7 +85,7 @@ We are on the internet after all.
 
 > sometimes between 4-6 hours, sometimes between 10-12 hours! but, these are just the project times, many times I am taking many days, weeks, or months of break between working on tracks..
 
-### Do you think some day you will release something on CD or Vinyl etc? 
+### Do you think some day you will release something on CD or Vinyl etc?
 
 > maybe! I am often asked to do so - it's a bit of a scary idea, though.. I'll figure it out some day!
 
@@ -91,7 +101,6 @@ We are on the internet after all.
 
 > my current objective is to take my time to find my comfort again, and to rebuild my creative mind.. I will release something as soon as I do this!! I'm not working on anything specific currently - I have lots of projects that I have created and abandoned in the past year, maybe I'll finish one of them...
 
-
 ## Closing words
 
 Interesting stuff! I hope she will get back on her feet regarding music production soon! I related to the break chopping question the most, also the SliceX downside she mentioned is an annoying one for sure... The playlist is able to do just that, but it sounds pretty horrible... FL Studio is full of surprises after all. **#FIXFLSTUDIOPITCHSHIFTING**
@@ -103,17 +112,26 @@ This was really fun to make. From questions to a little of the design I did on t
 ---
 
 <div class="not-prose flex gap-4 justify-center items-center rounded-lg">
-    <div>
-        <Image class="border rounded-full" width={96} src={hkmoriPfp} alt="hkmori" />
+  <div>
+    <Image
+      class="border rounded-full"
+      width={96}
+      src={hkmoriPfp}
+      alt="hkmori"
+    />
+  </div>
+  <div class="flex flex-col gap-1">
+    <h2 class="text-3xl font-thin">hkmori</h2>
+    <div class="text-xs flex flex-col gap-1">
+      <OutboundLink display="SoundCloud" href="https://soundcloud.com/hkmori" />
+      <OutboundLink display="Twitter" href="https://twitter.com/hkmori_" />
+      <OutboundLink display="Bandcamp" href="https://hkmori.bandcamp.com" />
     </div>
-    <div class="flex flex-col gap-1">
-        <h2 class="text-3xl font-thin">hkmori</h2>
-        <div class="text-xs flex flex-col gap-1">
-            <OutboundLink display='SoundCloud' href='https://soundcloud.com/hkmori' />
-            <OutboundLink display='Twitter' href='https://twitter.com/hkmori_' />
-            <OutboundLink display='Bandcamp' href='https://hkmori.bandcamp.com' />
-        </div>
-    </div>
+  </div>
 </div>
 
 ---
+
+## Edits
+
+- 03.09.2024: hkmori actually started making music on April 2022, not on July 2022
