@@ -48,6 +48,13 @@ title = title.charAt(0).toUpperCase() + title.slice(1);
           publishedTime: postMeta?.pubDate.toISOString(),
         },
       }}
+      twitter={{
+        card: "summary_large_image",
+        title: title,
+        description: desc,
+        image: `${Astro.site}android-chrome-192x192.png`,
+        imageAlt: "logo",
+      }}
     />
     <style>
       /* Hide scrollbar for Chrome, Safari and Opera */
