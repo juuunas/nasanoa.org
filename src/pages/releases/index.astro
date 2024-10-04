@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import OutboundLink from "../../components/OutboundLink.astro";
 
-const sortReleaseCollectionByDate = (arr: CollectionEntry<"releases">[]) => {
+const sortCollectionByDate = (arr: CollectionEntry<"releases">[]) => {
   arr.sort(
     (a, b) =>
       Date.parse(b.data.pubDate.toString()) -
@@ -29,8 +29,8 @@ const misc = await getCollection(
   ({ data }) => data.type === "misc"
 );
 
-sortReleaseCollectionByDate(albums);
-sortReleaseCollectionByDate(comps);
+sortCollectionByDate(albums);
+sortCollectionByDate(comps);
 ---
 
 <Layout title="Releases">

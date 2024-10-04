@@ -7,6 +7,11 @@ import BlogBase from "../../components/BlogBase.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const blogPosts = await getCollection("posts");
+  blogPosts.sort(
+    (a, b) =>
+      Date.parse(b.data.pubDate.toString()) -
+      Date.parse(a.data.pubDate.toString())
+  );
 
   return paginate(blogPosts, { pageSize: POSTS_PER_PAGE });
 }
