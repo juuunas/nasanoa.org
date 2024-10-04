@@ -26,7 +26,7 @@ First thing you should do is configure your browser to be routed through it and 
 
 One powerful thing about it when proxying HTTP, is that you can Replay requests.
 
-If you have an application that doesn't allow proxying the traffic, it requires a little know. It is doable to do it regularly, but probably easier to do it the way I'm gonna show next.
+If you have an application that doesn't allow proxying the traffic, it requires a little know how. It is doable to do it regularly, but probably easier to do it the way I'm gonna show next.
 
 ### Transparent
 
@@ -56,8 +56,6 @@ This is all we need to achieve our objective. Make the domains above (with the s
 ### Implementation
 
 I'm going to use a very simple Express server for a quick PoC.
-
-Server data:
 
 ```js
 const express = require("express");
@@ -130,7 +128,7 @@ So I replicated the server and now when we "login", with empty credentials, some
 
 ### Now what?
 
-So from this point on, the app doesn't use HTTP anymore, it sends Enet packets to the server address defined at server_data.php. They will show up as UDP in mitmproxy, as Enet is a wrapper on UDP. I haven't yet really found a good way on how I can easily inspect the server < - > client packets... yet?
+So from this point on, the app doesn't use HTTP anymore, it sends Enet packets to the server address defined at server_data.php. They will show up as UDP in mitmproxy, as Enet is a wrapper on UDP. The packets will be nonsense, as you need an Enet server to decode and encode the outgoing and incoming packets.
 
 If anything, we would have to make a wrapper for Enet for Node.js, as Enet is a C/C++ library, or just switch to C/C++ entirely, if we want to continue from this point on.
 
