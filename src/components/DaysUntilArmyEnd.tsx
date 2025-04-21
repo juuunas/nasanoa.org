@@ -45,7 +45,9 @@ export default function DaysUntilArmyEnd() {
       <div className="relative z-10">
         <h2 className="text-xl md:text-2xl font-bold mb-2">
           Tänään jäljellä{" "}
-          <span class="hidden text-white/25 group-hover:block">(1/25)</span>
+          <span class="hidden text-white/25 group-hover:block">
+            (1/25, 165)
+          </span>
         </h2>
         {daysLeft !== null ? (
           daysLeft <= 0 ? (
