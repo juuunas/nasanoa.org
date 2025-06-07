@@ -1,12 +1,13 @@
 ---
-import { getEntryBySlug } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import LastfmNowPlaying from "../components/LastfmNowPlaying";
 import { Image } from "astro:assets";
 import DaysUntilArmyEnd from "../components/DaysUntilArmyEnd";
 import TutkaHonor from "../components/TutkaHonor";
+import { getEntry } from "astro:content";
+import Weather from "../components/Weather";
 
-const index = await getEntryBySlug("pages", "index");
+const index = await getEntry("pages", "index")!;
 const { Content } = await index.render();
 ---
 
@@ -28,12 +29,7 @@ const { Content } = await index.render();
       width={200}
       height={300}
     />
-    <iframe
-      class="rounded-lg w-fit h-full"
-      title="Weather"
-      src="https://wttr.in/H%C3%A4meenlinna?0q"
-    >
-    </iframe>
+    <Weather client:load />
     <DaysUntilArmyEnd client:load />
     <TutkaHonor client:load />
   </div></Layout
