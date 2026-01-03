@@ -9,9 +9,7 @@ function getDaysUntilJune19Finland(): number {
       day: "2-digit",
     }).format(new Date())
   );
-
-  const year = today.getFullYear();
-  const target = new Date(`${year}-06-19`);
+  const target = new Date(`2025-06-19`);
 
   const msPerDay = 24 * 60 * 60 * 1000;
   const diffInDays = Math.round(
